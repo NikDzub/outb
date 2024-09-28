@@ -1,0 +1,33 @@
+RTB, or Real-Time Bidding, is a digital advertising process that allows advertisers to bid on ad impressions in real-time. 
+is an automated digital auction process that allows advertisers to bid on ad space from publishers on a cost-per-1000 
+impressions (CPM), CPM is what you pay for 1k ppl to c ur ad, so the highest bid from relevant ads will typically win the ad placment. not spending money on people with 0 intrests 4 ur busniess.
+
+it involves 3 platforms for ad buying:
+-supply side platform (SSP)
+-ad exchanges
+-demand side platform (DSP)
+
+and these diffrent platforms work together to get ads infront of the user.
+
+DSP-
+allows an advertiser to buy ad space and manage their ads,
+a place 4 advetisers who have demand for ad space.
+for example: Google Ads
+
+ad exchange-
+in between the advetiser and the publisher is the ad exchange,
+like a market with vendors and buyers
+
+SSP-
+a supply side platform is what publishers/site owners use to help them sell their 
+ad space to advertisers.
+the publishers use the ssp to supply the space for ads
+
+How does real time bidding work?
+the rtb starts with the user, when u click a link to go to a website rtb begins.
+b4 the page loads the sites publisher sends avialable ad space dimensions to the SSP 
+then the SSP looks at ur cookies to get data on web activity,intersts location and more.. 
+this data helps determine what ad would be relevant to the user. 
+next, the DSP assigns a value to the user and places a bid on the ad space based on that data. 
+finnaly, the SSP recives the bids and picks a winner based on the highest/relevant bid. 
+once an ad gets chosen the website loads, showing the winning ad on ur screen. 
