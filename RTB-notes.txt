@@ -31,3 +31,4 @@ this data helps determine what ad would be relevant to the user.
 next, the DSP assigns a value to the user and places a bid on the ad space based on that data. 
 finnaly, the SSP recives the bids and picks a winner based on the highest/relevant bid. 
 once an ad gets chosen the website loads, showing the winning ad on ur screen. 
+
