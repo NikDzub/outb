@@ -1,3 +1,84 @@
+OpenRTB (Open Real-Time Bidding) is a protocol that standardizes the way advertisers and publishers communicate during the programmatic advertising process. The protocol outlines how bid requests and responses are formatted, ensuring compatibility across different platforms and systems.
+
+### Key Components of OpenRTB
+
+1. **Bid Request**: This is a JSON object sent from the publisher's ad server to potential bidders (advertisers). It includes information such as:
+   - **ID**: Unique identifier for the bid request.
+   - **Impression**: Details about the ad space (size, type, etc.).
+   - **Site/App**: Information about the website or app where the ad will be displayed.
+   - **User**: Data related to the user (if available), such as demographics, interests, etc.
+   - **Device**: Information about the device being used (OS, browser, etc.).
+   - **Price Floor**: Minimum price the publisher is willing to accept.
+
+2. **Bid Response**: After receiving a bid request, advertisers respond with a bid response, which includes:
+   - **ID**: Unique identifier that matches the bid request.
+   - **Seat Bid**: Contains one or more bid objects, each detailing:
+     - **Bid ID**: Unique identifier for the bid.
+     - **Impression ID**: The ID of the impression being bid on.
+     - **Price**: The bid amount.
+     - **Ad ID**: Identifier for the ad being offered.
+     - **Creative**: The ad content, which can be a URL to the ad asset.
+
+3. **Winning Bid Notification**: If an advertiser wins the auction, the system notifies the ad server, which then serves the ad to the user.
+
+### Example JSON Structure
+
+**Bid Request Example:**
+
+```json
+{
+  "id": "123456789",
+  "imp": [{
+    "id": "1",
+    "banner": {
+      "w": 300,
+      "h": 250
+    },
+    "bidfloor": 0.50
+  }],
+  "site": {
+    "id": "987",
+    "name": "example.com",
+    "domain": "example.com"
+  },
+  "user": {
+    "id": "user123",
+    "keywords": "sports, music"
+  },
+  "device": {
+    "ip": "192.0.2.1",
+    "ua": "Mozilla/5.0"
+  }
+}
+```
+
+**Bid Response Example:**
+
+```json
+{
+  "id": "123456789",
+  "seatbid": [{
+    "seat": "advertiser1",
+    "bid": [{
+      "id": "bid1",
+      "impid": "1",
+      "price": 1.50,
+      "adm": "<html>Ad content here</html>"
+    }]
+  }]
+}
+```
+
+### Versioning
+
+OpenRTB has several versions (e.g., 2.3, 2.4, 2.5) that introduce new fields and updates. It's important to refer to the official OpenRTB specification for the version you are using, as the structure and available fields may vary.
+
+### Conclusion
+
+OpenRTB facilitates seamless and efficient communication between publishers and advertisers, enabling real-time bidding for digital ad inventory. By adhering to the protocol, companies can ensure that their systems work well together in the dynamic landscape of programmatic advertising.
+
+
+----------------------------------------------------------------------------------------------------------------
 Programmatic ad’s means it is a process of automatic buying advertising space on websites and Apps. Programmatic advertising makes it is possibilities purchase and ad place including targeting advertising content in less than one second.
 The Ad’s are placed through the system known as RTB (real time bidding). It’s manage transaction between publisher side (supply side) and advertise side (demand side).
 ![Screenshot 2024-09-29 at 23 34 58](https://github.com/user-attachments/assets/1ed79871-8518-4af5-9e8f-4d6944207a21)
